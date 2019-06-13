@@ -10,10 +10,8 @@ class ConsumerConan(base.get_conanfile()):
     version = "0.2"
     generators = "Waf"
     exports = "wscript", "example.cpp"
-
-    def requirements(self):
-        self.requires("opencv/4.1.0@conan/stable")
-        self.requires("WafGen/0.1@czoido/testing")
+    requires = "opencv/4.1.0@conan/stable", "WafGen/0.1@czoido/testing"
+    build_requires = "waf/2.0.17@czoido/testing"
 
     def source(self):
         pass
