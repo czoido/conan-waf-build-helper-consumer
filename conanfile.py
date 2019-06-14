@@ -22,5 +22,6 @@ class ConsumerConan(base.get_conanfile()):
         waf.build()
 
     def imports(self):
-        self.copy("*.dll", dst="build", src="bin")
+        self.copy("*.dll", dst="build", src="lib")
         self.copy("*.dylib*", dst="build", src="lib")
+        self.copy("*.so*", dst="build", src="lib")
