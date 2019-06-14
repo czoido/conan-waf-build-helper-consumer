@@ -4,5 +4,6 @@
 
 int main() {
 	cv::Mat image(320, 240, CV_8UC3, cv::Scalar(0,0,0));
-	cv::imshow("test", image);
+	cv::imwrite("test.jpg", image);
+	std::cout << "saved image: test.jpg" << std::endl;
 }
