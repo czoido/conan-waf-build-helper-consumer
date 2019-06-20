@@ -1,4 +1,4 @@
-from conans import ConanFile, CMake, python_requires
+from conans import ConanFile, python_requires
 
 
 base = python_requires("waf-build-helper/0.1@czoido/testing")
